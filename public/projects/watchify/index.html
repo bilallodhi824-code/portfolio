@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WATCHIFY | Bespoke Swiss Luxury Timepieces</title>
+  <meta name="description" content="Watchify offers hand-crafted Swiss luxury timepieces, tourbillons, chronographs, and bespoke watch customizer.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Background Ambient Effects -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="44" stroke="url(#gold-grad)" stroke-width="4"/>
+          <circle cx="50" cy="50" r="36" stroke="rgba(212,175,55,0.3)" stroke-width="2"/>
+          <line x1="50" y1="50" x2="50" y2="24" stroke="url(#gold-grad)" stroke-width="4" stroke-linecap="round"/>
+          <line x1="50" y1="50" x2="68" y2="50" stroke="url(#gold-grad)" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="50" cy="50" r="5" fill="#d4af37"/>
+          <defs>
+            <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#f3e0aa" />
+              <stop offset="50%" stop-color="#d4af37" />
+              <stop offset="100%" stop-color="#997a15" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="brand-name">WATCHIFY<span class="gold-dot">.</span></span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#collections" class="nav-link">Collections</a>
+        <a href="#configurator" class="nav-link">Configurator</a>
+        <a href="#craftsmanship" class="nav-link">Craftsmanship</a>
+        <a href="#simulator" class="nav-link">Wrist View</a>
+        <a href="#testimonials" class="nav-link">Reviews</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="searchToggleBtn" title="Search Timepieces">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="icon-btn" id="wishlistToggleBtn" title="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge" id="wishlistCount">0</span>
+        </button>
+        <button class="icon-btn cart-btn" id="cartToggleBtn" title="Shopping Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge" id="cartCount">0</span>
+        </button>
+        <button class="btn btn-outline" id="vipBtn">VIP Consultation</button>
+        <button class="hamburger-btn" id="hamburgerBtn">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search Overlay Bar -->
+    <div class="search-overlay" id="searchOverlay">
+      <div class="container search-container">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Search Tourbillon, Chronograph, Gold, Sapphire...">
+        <button class="close-search-btn" id="closeSearchBtn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span> Swiss Horology Excellence
+        </div>
+        <h1 class="hero-title">
+          Mastery of Time, <br>
+          <span class="gold-text">Sculpted in Gold</span> & Sapphire.
+        </h1>
+        <p class="hero-subtitle">
+          Experience Watchify's bespoke timepiece collection. Unrivaled mechanical precision, hand-carved skeleton movements, and timeless elegance for true connoisseurs.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#collections" class="btn btn-gold">
+            <span>Explore Collection</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#configurator" class="btn btn-glass">
+            <i class="fa-solid fa-sliders"></i>
+            <span>Bespoke Customizer</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Swiss Certified</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">72 Hrs</span>
+            <span class="stat-label">Power Reserve</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">10 Yrs</span>
+            <span class="stat-label">Global Warranty</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="watch-halo"></div>
+        <div class="hero-image-wrapper" id="heroWatchCard">
+          <img src="images/hero_watch.png" alt="Grand Obsidian Tourbillon" class="hero-watch-img" id="heroWatchImg">
+          <div class="floating-spec spec-top">
+            <i class="fa-solid fa-microchip"></i>
+            <div>
+              <strong>Caliber 9001</strong>
+              <small>Flying Tourbillon</small>
+            </div>
+          </div>
+          <div class="floating-spec spec-bottom">
+            <i class="fa-solid fa-gem"></i>
+            <div>
+              <strong>18K Rose Gold</strong>
+              <small>Scratchproof Sapphire</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights Banner -->
+  <section class="banner-strip">
+    <div class="container banner-grid">
+      <div class="banner-item">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div>
+          <h4>10-Year Warranty</h4>
+          <p>Full global coverage & service</p>
+        </div>
+      </div>
+      <div class="banner-item">
+        <i class="fa-solid fa-plane-up"></i>
+        <div>
+          <h4>Insured Global Express</h4>
+          <p>Complimentary white-glove delivery</p>
+        </div>
+      </div>
+      <div class="banner-item">
+        <i class="fa-solid fa-hand-sparkles"></i>
+        <div>
+          <h4>Master Handcrafted</h4>
+          <p>Hand-assembled in Geneva</p>
+        </div>
+      </div>
+      <div class="banner-item">
+        <i class="fa-solid fa-certificate"></i>
+        <div>
+          <h4>COSC Certified</h4>
+          <p>Tested for ultimate precision</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive 3D Configurator / Customizer Section -->
+  <section class="section configurator-section" id="configurator">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">BESPOKE STUDIO</span>
+        <h2 class="section-title">Design Your Masterpiece</h2>
+        <p class="section-desc">Customize every element of your timepiece. Personalize dial tones, strap materials, and gold finishes to create an unrepeatable signature statement.</p>
+      </div>
+
+      <div class="configurator-wrapper glass-card">
+        <!-- Live Preview Area -->
+        <div class="config-preview">
+          <div class="config-badge" id="customizerBadge">Bespoke Edition</div>
+          <div class="config-image-container">
+            <img src="images/hero_watch.png" alt="Custom Watch Preview" id="configWatchImg" class="config-watch-img">
+            <div class="config-glow" id="configGlow"></div>
+          </div>
+          <div class="config-spec-summary">
+            <span id="configDialName">Obsidian Black Dial</span> • 
+            <span id="configCaseName">18K Rose Gold Case</span> • 
+            <span id="configStrapName">Alligator Leather Strap</span>
+          </div>
+        </div>
+
+        <!-- Customizer Controls -->
+        <div class="config-controls">
+          <h3 class="config-title">Personalization Suite</h3>
+
+          <!-- Dial Option -->
+          <div class="option-group">
+            <label class="option-label">1. Select Dial Face</label>
+            <div class="color-options" id="dialOptions">
+              <button class="color-btn active" data-dial="obsidian" data-name="Obsidian Black Dial" data-img="images/hero_watch.png" style="background: #0f1219;" title="Obsidian Black">
+                <span class="color-name">Obsidian</span>
+              </button>
+              <button class="color-btn" data-dial="sapphire" data-name="Midnight Sapphire Dial" data-img="images/sapphire_diver.png" style="background: #0d2847;" title="Midnight Sapphire">
+                <span class="color-name">Sapphire</span>
+              </button>
+              <button class="color-btn" data-dial="emerald" data-name="Emerald Reserve Dial" data-img="images/emerald_limited.png" style="background: #082d1c;" title="Emerald Reserve">
+                <span class="color-name">Emerald</span>
+              </button>
+              <button class="color-btn" data-dial="champagne" data-name="Rose Champagne Dial" data-img="images/chronograph_gold.png" style="background: #4a2818;" title="Rose Champagne">
+                <span class="color-name">Champagne</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Case Option -->
+          <div class="option-group">
+            <label class="option-label">2. Case Material & Finish</label>
+            <div class="select-options" id="caseOptions">
+              <button class="pill-btn active" data-case="rosegold" data-price="0" data-name="18K Rose Gold Case">18K Rose Gold</button>
+              <button class="pill-btn" data-case="platinum" data-price="2500" data-name="Platinum Brushed Case">Platinum (+ $2,500)</button>
+              <button class="pill-btn" data-case="ceramic" data-price="1200" data-name="Black Diamond Ceramic Case">Black Ceramic (+ $1,200)</button>
+            </div>
+          </div>
+
+          <!-- Strap Option -->
+          <div class="option-group">
+            <label class="option-label">3. Strap Material</label>
+            <div class="select-options" id="strapOptions">
+              <button class="pill-btn active" data-strap="alligator" data-price="0" data-name="Alligator Leather Strap">Hand-Stitched Alligator</button>
+              <button class="pill-btn" data-strap="steel" data-price="800" data-name="Brushed Steel Mesh Bracelet">Steel Mesh (+ $800)</button>
+              <button class="pill-btn" data-strap="rubber" data-price="400" data-name="Sport Rubber Strap">Vulcanized Rubber (+ $400)</button>
+            </div>
+          </div>
+
+          <!-- Custom Engraving -->
+          <div class="option-group">
+            <label class="option-label">4. Caseback Engraving (Optional)</label>
+            <input type="text" id="engravingInput" class="custom-input" placeholder="e.g., 'To New Beginnings 2026'" maxlength="24">
+          </div>
+
+          <!-- Pricing & Action -->
+          <div class="config-footer">
+            <div class="price-box">
+              <span class="price-label">Configured Total</span>
+              <span class="price-amount" id="customizerPrice">$24,500</span>
+            </div>
+            <button class="btn btn-gold w-100" id="addCustomizerToCart">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <span>Add Custom Creation to Cart</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collection Showcase Section -->
+  <section class="section collection-section" id="collections">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">CURATED TIMEPIECES</span>
+        <h2 class="section-title">The Masterpiece Collection</h2>
+        <p class="section-desc">Explore our flagship series featuring mechanical tourbillons, precision chronographs, and deep sea sapphire divers.</p>
+      </div>
+
+      <!-- Filters & Search Toolbar -->
+      <div class="filter-toolbar">
+        <div class="category-filters" id="categoryFilters">
+          <button class="filter-btn active" data-category="all">All Watches</button>
+          <button class="filter-btn" data-category="tourbillon">Tourbillon</button>
+          <button class="filter-btn" data-category="chronograph">Chronograph</button>
+          <button class="filter-btn" data-category="diver">Diver</button>
+          <button class="filter-btn" data-category="limited">Limited Edition</button>
+        </div>
+
+        <div class="sort-wrapper">
+          <label for="sortSelect"><i class="fa-solid fa-arrow-down-short-wide"></i> Sort By:</label>
+          <select id="sortSelect" class="custom-select">
+            <option value="featured">Featured First</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Highest Rated</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="product-grid" id="productGrid">
+        <!-- Javascript will render products dynamically here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Craftsmanship & Heritage Section -->
+  <section class="section craftsmanship-section" id="craftsmanship">
+    <div class="container">
+      <div class="craft-grid">
+        <div class="craft-image-wrapper">
+          <img src="images/craftsmanship.png" alt="Swiss Watchmaker Craftsmanship" class="craft-img">
+          <div class="craft-experience-badge">
+            <span class="years">1888</span>
+            <span class="text">Geneva Heritage</span>
+          </div>
+        </div>
+
+        <div class="craft-content">
+          <span class="section-tag">GENEVA HOROLOGY</span>
+          <h2 class="section-title">Uncompromising Swiss Precision</h2>
+          <p class="craft-text">
+            Every Watchify timepiece undergoes over 400 hours of meticulous assembly by Geneva's most accomplished master artisans. From heat-blued screws to hand-beveled tourbillon cages, perfection is our baseline standard.
+          </p>
+
+          <div class="craft-tabs">
+            <button class="craft-tab-btn active" data-tab="tab-movement">Swiss Movement</button>
+            <button class="craft-tab-btn" data-tab="tab-materials">Noble Materials</button>
+            <button class="craft-tab-btn" data-tab="tab-testing">Chronometer Test</button>
+          </div>
+
+          <div class="craft-tab-content active" id="tab-movement">
+            <ul class="craft-list">
+              <li><i class="fa-solid fa-check"></i> Self-winding mechanical caliber with 28,800 vibrations per hour (4Hz).</li>
+              <li><i class="fa-solid fa-check"></i> Anti-magnetic silicon hairspring with 72-hour power reserve.</li>
+              <li><i class="fa-solid fa-check"></i> Skeletonized mainplate featuring hand-polished Côtes de Genève finish.</li>
+            </ul>
+          </div>
+
+          <div class="craft-tab-content" id="tab-materials">
+            <ul class="craft-list">
+              <li><i class="fa-solid fa-check"></i> Solid 18K 750 gold, platinum 950, or aerospace-grade Grade 5 Titanium.</li>
+              <li><i class="fa-solid fa-check"></i> Double glareproofed sapphire crystals resistant to 9 Mohs hardness.</li>
+              <li><i class="fa-solid fa-check"></i> Ethically sourced alligator and calfskin leathers with deployment clasp.</li>
+            </ul>
+          </div>
+
+          <div class="craft-tab-content" id="tab-testing">
+            <ul class="craft-list">
+              <li><i class="fa-solid fa-check"></i> COSC Certified Chronometer testing across 5 different positions.</li>
+              <li><i class="fa-solid fa-check"></i> 100m to 300m hydrostatic pressure testing in hyperbaric chambers.</li>
+              <li><i class="fa-solid fa-check"></i> Extreme thermal shock resilience from -20°C to +60°C.</li>
+            </ul>
+          </div>
+
+          <a href="#vip" class="btn btn-outline mt-4" id="requestCatalogBtn">
+            <i class="fa-solid fa-book-open"></i> Request Heritage Brochure
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Wrist Simulator / Try-On Section -->
+  <section class="section simulator-section" id="simulator">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">VIRTUAL TRY-ON</span>
+        <h2 class="section-title">Interactive Wrist Simulator</h2>
+        <p class="section-desc">Visualize how Watchify models sit against tailored suits, casual linen, or dark executive attire.</p>
+      </div>
+
+      <div class="simulator-box glass-card">
+        <div class="sim-controls">
+          <div class="sim-option">
+            <label><i class="fa-solid fa-user-tie"></i> Attire Style</label>
+            <div class="sim-buttons" id="attireBtns">
+              <button class="sim-btn active" data-bg="tuxedo">Black Tie Tuxedo</button>
+              <button class="sim-btn" data-bg="linen">Italian Linen</button>
+              <button class="sim-btn" data-bg="executive">Navy Executive</button>
+            </div>
+          </div>
+
+          <div class="sim-option">
+            <label><i class="fa-solid fa-clock"></i> Select Watch Model</label>
+            <div class="sim-buttons" id="modelSimBtns">
+              <button class="sim-btn active" data-img="images/hero_watch.png" data-title="Grand Tourbillon">Grand Tourbillon</button>
+              <button class="sim-btn" data-img="images/chronograph_gold.png" data-title="Aureus Chrono">Aureus Chrono</button>
+              <button class="sim-btn" data-img="images/sapphire_diver.png" data-title="Deep Sapphire">Deep Sapphire</button>
+              <button class="sim-btn" data-img="images/emerald_limited.png" data-title="Emerald Reserve">Emerald Reserve</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="sim-stage" id="simStage">
+          <div class="sim-attire-bg tuxedo-bg" id="simAttireBg"></div>
+          <div class="sim-wrist-overlay">
+            <div class="wrist-outline"></div>
+            <img src="images/hero_watch.png" alt="Simulator Watch" id="simWatchImg" class="sim-watch-img">
+          </div>
+          <div class="sim-caption">
+            <span id="simWatchTitle">Grand Obsidian Tourbillon</span> on <span id="simAttireTitle">Black Tie Tuxedo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Reviews / Testimonials Section -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">COLLECTOR VOICES</span>
+        <h2 class="section-title">Endorsed by Connoisseurs</h2>
+        <p class="section-desc">Read feedback from haute horology enthusiasts around the world.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card glass-card">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="quote">"The finish on the Grand Tourbillon easily rivaled watches in my collection costing three times as much. The skeleton movement is a pure mechanical work of art."</p>
+          <div class="author-info">
+            <div class="author-avatar">HR</div>
+            <div>
+              <h5 class="author-name">Harrison R.</h5>
+              <small class="author-role">Geneva Watch Club Member</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card glass-card">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="quote">"The bespoke customizer experience was seamless. I tailored my Aureus Chrono with an emerald dial and champagne case, and it arrived in a handcrafted wooden vault."</p>
+          <div class="author-info">
+            <div class="author-avatar">VS</div>
+            <div>
+              <h5 class="author-name">Victoria S.</h5>
+              <small class="author-role">Private Art & Watch Collector</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card glass-card">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="quote">"The Oceanus Sapphire Diver feels virtually indestructible while exuding high sophistication. White-glove express shipping to Tokyo was flawless."</p>
+          <div class="author-info">
+            <div class="author-avatar">KT</div>
+            <div>
+              <h5 class="author-name">Kenji T.</h5>
+              <small class="author-role">Horological Journalist</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter & VIP Consultation -->
+  <section class="section vip-section" id="vip">
+    <div class="container">
+      <div class="vip-card glass-card">
+        <div class="vip-content text-center">
+          <span class="section-tag">EXCLUSIVE CLUB</span>
+          <h2>Join Watchify Private Circle</h2>
+          <p>Receive private allocations, invitations to Geneva horology exhibitions, and early access to limited edition drops.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Enter your VIP email address..." required id="newsletterEmail">
+            <button type="submit" class="btn btn-gold">
+              <span>Subscribe</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+          <small class="privacy-note"><i class="fa-solid fa-lock"></i> Strictly private & encrypted. Unsubscribe anytime.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col brand-col">
+        <a href="#" class="brand-logo">
+          <span class="brand-name">WATCHIFY<span class="gold-dot">.</span></span>
+        </a>
+        <p class="footer-desc">Swiss luxury timepieces engineered with mathematical precision, handcrafted gold alloys, and sapphire crystal longevity.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Timepiece Series</h4>
+        <ul>
+          <li><a href="#collections">Tourbillon Series</a></li>
+          <li><a href="#collections">Chronograph Gold</a></li>
+          <li><a href="#collections">Sapphire Diver</a></li>
+          <li><a href="#collections">Limited Reserve</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Bespoke Services</h4>
+        <ul>
+          <li><a href="#configurator">Bespoke Studio</a></li>
+          <li><a href="#simulator">Virtual Wrist Try-On</a></li>
+          <li><a href="#craftsmanship">Geneva Workshop</a></li>
+          <li><a href="#" id="openVipModal">Private Consultation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Boutique Headquarters</h4>
+        <p class="location-text"><i class="fa-solid fa-location-dot"></i> Rue du Rhône 42, 1204 Genève, Switzerland</p>
+        <p class="location-text"><i class="fa-solid fa-phone"></i> +41 22 819 9000</p>
+        <p class="location-text"><i class="fa-solid fa-envelope"></i> concierge@watchify-luxury.com</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 WATCHIFY Swiss Horology SA. All rights reserved.</p>
+      <p class="portfolio-tag">Crafted for Portfolio Showcase • High-End Interactive Web App</p>
+    </div>
+  </footer>
+
+  <!-- Slide-out Shopping Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay">
+    <div class="cart-drawer">
+      <div class="cart-header">
+        <h3><i class="fa-solid fa-bag-shopping gold-icon"></i> Your Vault (<span id="cartDrawerCount">0</span>)</h3>
+        <button class="close-btn" id="closeCartBtn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="cart-body" id="cartItemsList">
+        <!-- Cart Items Dynamic Render -->
+        <div class="empty-cart" id="emptyCartMsg">
+          <i class="fa-solid fa-clock-rotate-left empty-icon"></i>
+          <p>Your timepiece vault is currently empty.</p>
+          <a href="#collections" class="btn btn-gold btn-sm" id="exploreCartBtn">Explore Collections</a>
+        </div>
+      </div>
+
+      <div class="cart-footer" id="cartFooter">
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span class="amount" id="cartSubtotal">$0</span>
+        </div>
+        <div class="summary-line">
+          <span>Insured Express Shipping</span>
+          <span class="gold-text">Complimentary</span>
+        </div>
+        <div class="summary-line total-line">
+          <span>Total</span>
+          <span class="total-amount" id="cartTotal">$0</span>
+        </div>
+        <button class="btn btn-gold w-100 mt-3" id="checkoutBtn">
+          <span>Proceed to Checkout</span>
+          <i class="fa-solid fa-lock"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick View Modal -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="modal-card glass-card">
+      <button class="close-modal-btn" id="closeQuickViewBtn"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-body" id="quickViewContent">
+        <!-- Dynamic Quick View Content -->
+      </div>
+    </div>
+  </div>
+
+  <!-- VIP Consultation Modal -->
+  <div class="modal-overlay" id="vipModal">
+    <div class="modal-card glass-card modal-sm">
+      <button class="close-modal-btn" id="closeVipBtn"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-header text-center">
+        <span class="section-tag">PRIVATE APPOINTMENT</span>
+        <h3 class="modal-title">Book a Private Consultation</h3>
+        <p>Meet with a Watchify Horology Master in Geneva, London, or via Encrypted Video Call.</p>
+      </div>
+      <form id="vipForm" class="vip-form">
+        <div class="input-group">
+          <label>Full Name</label>
+          <input type="text" required placeholder="e.g. Lord Alexander Wright">
+        </div>
+        <div class="input-group">
+          <label>Email Address</label>
+          <input type="email" required placeholder="alexander@domain.com">
+        </div>
+        <div class="input-group">
+          <label>Preferred Salon</label>
+          <select class="custom-select">
+            <option>Geneva Flagship Salon</option>
+            <option>London Mayfair Boutique</option>
+            <option>New York Fifth Ave Salon</option>
+            <option>Encrypted Video Concierge</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label>Watch Series of Interest</label>
+          <select class="custom-select">
+            <option>Grand Tourbillon</option>
+            <option>Bespoke Customizer</option>
+            <option>Limited Edition Reserve</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-gold w-100">
+          <span>Request Reservation</span>
+          <i class="fa-solid fa-calendar-check"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Checkout Confirmation Modal -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal-card glass-card modal-sm text-center">
+      <button class="close-modal-btn" id="closeCheckoutBtn"><i class="fa-solid fa-xmark"></i></button>
+      <div class="success-icon-box">
+        <i class="fa-solid fa-shield-check"></i>
+      </div>
+      <h3 class="modal-title">Order Reserved & Secured</h3>
+      <p class="modal-desc">Thank you for selecting Watchify. Your order confirmation and insured courier tracking code have been dispatched.</p>
+      <div class="order-summary-box" id="checkoutOrderDetails">
+        <!-- Order info -->
+      </div>
+      <button class="btn btn-gold w-100" id="finishCheckoutBtn">Back to Boutique</button>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
